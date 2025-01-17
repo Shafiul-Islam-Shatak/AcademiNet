@@ -5,14 +5,15 @@ import { IoIosSearch } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
 import Logo from '../assets/AcademiNet_logo1.png'
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
 
   return (
-    <div className="sticky">
+    <div className="fixed w-full z-10">
       <nav
-        className="flex items-center justify-between w-full relative  boxShadow  px-[10px] py-[8px] bg-gray-300 bg-opacity-25 ">
+        className="flex items-center justify-between w-full relative  boxShadow  px-[10px] py-[8px] bg-gray-500 bg-opacity-50 ">
 
         {/* <Image
           src={Logo}
@@ -24,10 +25,10 @@ const Navbar = () => {
 
         <h1 className="text-3xl font-semibold text-orange-600">Academi<span>Net</span></h1>
 
-        <ul className="items-center gap-[20px] text-[1rem] text-[#424242] lg:flex hidden">
-          <li className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">home</li>
+        <ul className="items-center text-white gap-[20px] text-[1rem]  lg:flex hidden">
+          <li className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"><Link href={'/'}>home</Link></li>
 
-          <li className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">Commutinty</li>
+          <li className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"><Link href={'/community'}>Community</Link></li>
 
           <li className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">Teachers</li>
 
@@ -37,7 +38,7 @@ const Navbar = () => {
 
         <div className="items-center gap-[10px] flex">
           <button
-            className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all duration-300 sm:flex hidden">Sign
+            className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all text-white duration-300 sm:flex hidden">Sign
             in
           </button>
           <button
@@ -51,12 +52,7 @@ const Navbar = () => {
 
         <aside
           className={` ${mobileSidebarOpen ? "translate-x-0 opacity-100 z-20" : "translate-x-[200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
-          <div className="relative mb-5">
-            <input
-              className="py-1.5 pr-4 w-full pl-10 rounded-full border border-gray-200 outline-none focus:border-[#3B9DF8]"
-              placeholder="Search..." />
-            <IoIosSearch className="absolute top-[8px] left-3 text-gray-500 text-[1.3rem]" />
-          </div>
+        
           <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
             <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">home</li>
             <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-poin ter capitalize">Features
