@@ -1,8 +1,11 @@
+// import { Geist, Geist_Mono } from "next/font/google";
+import HeroSection from "@/components/HomeComponents/HeroSection";
 
 export default function Home() {
   return (
     <div>
-      <h1>Brand new project</h1>
+      {/* Home Page components goes here without the Navbar and Footer components. */}
+      <HeroSection />
     </div>
   );
 }
