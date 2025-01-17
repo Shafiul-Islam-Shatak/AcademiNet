@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HomeComponents/HeroSection";
+// import HeroSection from "@/components/HomeComponents/HeroSection";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
