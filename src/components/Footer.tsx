@@ -2,12 +2,11 @@
 import { CgFacebook } from "react-icons/cg";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { SlArrowUp } from "react-icons/sl";
-import Logo from '../assets/AcademiNet_logo1.png'
-import Image from "next/image";
+
 
 const Footer = () => {
   return (
-    <footer className="bg-white boxShadow rounded-xl w-full p-3 lg:p-4 relative">
+    <footer className="bg-white boxShadow  w-full p-3 lg:p-4 relative">
 
       <div
         className="w-full flex items-center justify-center pt-[30px] flex-col gap-[20px] pb-[130px]">
@@ -51,14 +50,19 @@ const Footer = () => {
           className="p-2 rounded-full border border-gray-300 cursor-pointer text-[2rem] text-gray-300" />
       </div>
 
+      {/* <Image
+        src={wave}
+        className="border border-red-100"
+      /> */}
+
       <img
         src="https://i.ibb.co/zNk7XT4/Rectangle-97.png"
         alt="background/image"
-        className="absolute max-h-28 w-full bottom-[20px] sm:bottom-0 left-0 right-0 z-10 rounded-b-xl" />
+        className="absolute max-h-28 w-full bottom-[20px]  sm:bottom-0 left-0 right-0 z-10" />
       <img
         src="https://i.ibb.co/0mp2FwS/Rectangle-95.png"
         alt="background/image"
-        className="absolute max-h-28 bottom-0 w-full left-0 right-0 z-10 rounded-b-xl" />
+        className="absolute max-h-28 bottom-0 w-full left-0 right-0 z-10  " />
 
     </footer>
   )

@@ -1,11 +1,7 @@
-import React, { useState } from "react";
-
 // react icons
-import { IoIosSearch } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
-import Logo from '../assets/AcademiNet_logo1.png'
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const Navbar = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
@@ -15,13 +11,6 @@ const Navbar = () => {
       <nav
         className="flex items-center justify-between w-full relative  boxShadow  px-[10px] py-[8px] bg-gray-500 bg-opacity-50 ">
 
-        {/* <Image
-          src={Logo}
-          width={55}
-          height={55}
-          alt="logo"
-        >
-        </Image> */}
 
         <h1 className="text-3xl font-semibold text-orange-600">Academi<span>Net</span></h1>
 
