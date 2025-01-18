@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const register = () => {
@@ -140,12 +141,12 @@ const register = () => {
           {/* Sign-Up Option */}
           <div className="flex items-center justify-between mt-4">
             <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
-            <a
+            <Link
               href="/login"
               className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
             >
               Already have an account?
-            </a>
+            </Link>
             <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
           </div>
         </div>

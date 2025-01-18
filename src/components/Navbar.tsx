@@ -26,14 +26,18 @@ const Navbar = () => {
         </ul>
 
         <div className="items-center gap-[10px] flex">
-          <button
-            className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all text-white duration-300 sm:flex hidden">Sign
-            in
-          </button>
+          <Link href={'/login'}>
+            <button
+              className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all text-white duration-300 sm:flex hidden">Sign
+              in
+            </button>
+          </Link>
+          <Link href={'/register'}>
           <button
             className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 sm:flex hidden">Sign
             up
           </button>
+          </Link>
 
           <CiMenuFries className="text-[1.8rem] mr-1 text-[#424242]c cursor-pointer lg:hidden flex"
             onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)} />
@@ -41,7 +45,7 @@ const Navbar = () => {
 
         <aside
           className={` ${mobileSidebarOpen ? "translate-x-0 opacity-100 z-20" : "translate-x-[200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
-        
+
           <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
             <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">home</li>
             <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-poin ter capitalize">Features
